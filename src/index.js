@@ -22,7 +22,9 @@ loadMoreBtn.button.addEventListener("click", loadMore);
 function onSearch(e) {
   e.preventDefault();
 
-  if (e.currentTarget.elements.searchQuery.value != APIService.searchQuery) {
+  APIService.page = 1;
+  const currentQuery = e.currentTarget.elements.searchQuery.value.trim();
+  if (currentQuery != APIService.searchQuery && currentQuery != "") {
     APIService.searchQuery = e.currentTarget.elements.searchQuery.value;
     clearGallery();
     loadMoreBtn.hide();
@@ -42,6 +44,7 @@ function onSearch(e) {
       }
     });
   }
+  REFS.searchForm.elements.searchQuery.value = "";
 }
 
 function renderPhotos(photos) {
