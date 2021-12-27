@@ -1,0 +1,30 @@
+.search-form {
+  height: 80px;
+  background-color: rgb(34, 11, 117);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    height: 35px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 0px 10px 3px 10px;
+  }
+
+  button {
+    height: 35px;
+    width: 45px;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+
+    img {
+      width: 60%;
+    }
+  }
+}
