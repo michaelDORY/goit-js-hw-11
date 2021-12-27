@@ -22,10 +22,7 @@ loadMoreBtn.button.addEventListener("click", loadMore);
 function onSearch(e) {
   e.preventDefault();
 
-<<<<<<< HEAD
   APIService.page = 1;
-=======
->>>>>>> 50f71a0a5b05d497e3db3ca408b06b8d221a50b8
   const currentQuery = e.currentTarget.elements.searchQuery.value.trim();
   if (currentQuery != APIService.searchQuery && currentQuery != "") {
     APIService.searchQuery = e.currentTarget.elements.searchQuery.value;
