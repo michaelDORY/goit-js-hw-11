@@ -30,7 +30,7 @@ function onSearch(e) {
     loadMoreBtn.hide();
 
     APIService.fetchPhotos().then(result => {
-      if (result.length == 0) {
+      if (result.length === 0) {
         Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
       }
       else if (result.length < APIService.perPage && result.length > 0) {
@@ -42,7 +42,7 @@ function onSearch(e) {
         renderPhotos(result);
         loadMoreBtn.show();
       }
-    });
+    })
   }
   REFS.searchForm.elements.searchQuery.value = "";
 }
