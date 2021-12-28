@@ -86,6 +86,7 @@ function loadMore() {
   APIService.fetchPhotos().then(result => {
     if (APIService.perPage * (APIService.page + 1) >= APIService.totalHits) {
       Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
+      renderPhotos(result)
       loadMoreBtn.hide();
     }
     else {
